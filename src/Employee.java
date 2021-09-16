@@ -1,10 +1,15 @@
 
 final public class Employee extends AbstractPerson  {
-    final String department = "полиция";
-    final String position = "помощник";
+    private Position position;
+    private final String department = "полиция";
+    enum Position {ПОМОЩНИК, ПОЛКОВНИК, ГЕНЕРАЛ }
 
     Employee(String name) throws Exception{
         super(name);
+    }
+
+    public void setPosition(Position position) {
+        this.position = position;
     }
 
     @Override

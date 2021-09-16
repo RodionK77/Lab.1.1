@@ -1,6 +1,6 @@
 
 public abstract class AbstractPerson implements HumanInterface {
-    String name;
+    protected String name;
 
     AbstractPerson(){}
 

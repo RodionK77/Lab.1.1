@@ -2,7 +2,7 @@ public class PersonEx {
     private int age;
     private int height;
     private String name;
-    private String gender;
+    private Gender gender;
     public enum Gender {
         MALE(1, "мужчина"), FEMALE(2, "женщина"), OTHER(1024, "другое");
 
@@ -23,12 +23,8 @@ public class PersonEx {
 
     PersonEx(){};
 
-    public void setGender(String g){
-        if(g == "MALE"){
-            gender = Gender.MALE.getStrvalue();
-        }else if (g == "FEMALE"){
-            gender = Gender.FEMALE.getStrvalue();
-        }else gender = Gender.OTHER.getStrvalue();
+    public void setGender(Gender gender){
+        this.gender = gender;
     }
 
     public void setAge(int Age) throws Exception{
@@ -62,7 +58,7 @@ public class PersonEx {
 
     @Override
     public String toString(){
-        return "age: " + age + " height: " + height + " name: " + name + " gender " + gender;
+        return "age: " + age + " height: " + height + " name: " + name + " gender " + gender.getStrvalue();
     }
 
 }

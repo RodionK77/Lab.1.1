@@ -47,7 +47,7 @@ public class PersonExTest {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        p.setGender("MALE");
+        p.setGender(PersonEx.Gender.MALE);
         System.out.println(p);
     }
 }
